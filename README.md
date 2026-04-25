@@ -29,7 +29,7 @@ from throne_sdk import ThroneClient
 async def main():
     async with ThroneClient() as client:
         try:
-            wishlist = await client.get_wishlist("elaska")
+            wishlist = await client.get_wishlist("username")
             for item in wishlist:
                 print(f"{item.name} - {item.price}")
         except Exception as e:
@@ -44,7 +44,7 @@ Perfect for "Recent Wishlist Item" widgets in stream overlays:
 
 ```python
 async with ThroneClient() as client:
-    item = await client.get_last_item("elaska")
+    item = await client.get_last_item("username")
     if item:
         print(f"Newest wish: {item.name}")
 ```
