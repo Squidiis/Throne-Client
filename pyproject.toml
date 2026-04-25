@@ -13,8 +13,8 @@ dependencies = [
     "beautifulsoup4>=4.14.3",
 ]
 
-[tool.setuptools]
-packages = ["throne_sdk"]
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [build-system]
 requires = ["setuptools>=61.0"]
